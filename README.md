@@ -29,7 +29,7 @@ On a related note, '1932af[...]' does use QT5. The newer BLE commit appears to r
 
 
 ### Linux LMDE5/6 Dependencies/Packages
-I have tracking this a go again on LMDE6, but due to the confusion of what was going on with the BLE commit, I ended up just installing everything. Technically, QT6 is also installed on my box, but that shouldn't be necessary. If you discover so, then same method will install QT6. Breaking up so easier to check install list before 'Y'.
+I gave tracking this a go again on LMDE6, but due to the confusion of what was going on with the BLE commit, I ended up just installing everything. Technically, QT6 is also installed on my box, but that shouldn't be necessary. If you discover so, then same method will install QT6. Breaking up so easier to check install list before 'Y'.
 - `sudo apt install build-essential` <-- usual for about any source compiles.
 - `sudo apt install libusb-1.0-0-dev` <-- unsure if this was still needed, but wouldn't doubt it.
 - `sudo apt install qt5*`
