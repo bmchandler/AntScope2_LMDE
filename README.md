@@ -31,5 +31,27 @@ For source installs/compiles where I'm not using a package manager I like 1 fold
   - Qt builds using qtcreator had default directory creation outside of the project root. I'm sure there's good reason for it (I have very little knowlege of Qt), but it spams up my `src_installs` directory, requiring cleanup when I'm done that I'd rather not have to do.
 - `~/src_installs/qt_apps/AntScope2_LMDE` <-- Do not create. It will be created on `git clone` step.
 
-### Compile Steps (as of 240120)
-1) TODO
+### Compile/Build Steps (as of 240120)
+1) Open 'Qt Creator'
+2) Click 'Edit' -> 'Preferences'
+3) Click 'Kits' section -> 'Qt Versions' tab -> 'Add'
+4) In dialog:
+    - Nav to `/usr/bin`
+    - Select `qmake` (not `qmake6` if it's installed; on LMDE6 `qmake` is QT5)
+    - Click 'Open'
+5) Click 'Kits' tab under the 'Kits' section
+6) Select 'Qt 5.15.8 (qt5)' or equiv. on the 'Qt version' dropdown
+7) Click 'OK'
+8) Click 'Welcome' -> 'Open Project'
+9) Nav to `AntScope2_LMDE` directory
+10) Select `AntScope.pro` file and then 'Open'
+11) If QT6 is also installed, then 'Configure Project' page may appear. Be sure to uncheck QT6 configuration and check the QT5 one.
+12) Let 'Indexing AntScope with clangd' finish along with the other scanning statuses.
+13) In bottom left, click Monitor icon-button and then 'Release' under 'Build'
+14) Again, let indexing finish.
+15) Click the Play icon-button
+16) If build succeeds then warnings may appear, but no errors, and AntScope2 program will open (not done yet, but must get here before continuing). I like to close it here.
+17) Successful build and run should have created `~/RigExpert/AntScope2` directory. Check and if not then go ahead and create it now with `mkdir ~/RigExpert` and then `mkdir ~/RigExpert/AntScope2`. It will be needed on after build steps.
+
+### After Build Steps
+- TODO
