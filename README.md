@@ -54,4 +54,29 @@ For source installs/compiles where I'm not using a package manager I like 1 fold
 17) Successful build and run should have created `~/RigExpert/AntScope2` directory. Check and if not then go ahead and create it now with `mkdir ~/RigExpert` and then `mkdir ~/RigExpert/AntScope2`. It will be needed on after build steps.
 
 ### After Build Steps
+- TODO: Add directory to this repo containing the extra files downloaded from D.R. Evans' blog since I have no clue where to get them otherwise. Create folder `post_build_files` to contain all files for below steps.
+1) Open terminal/command prompt
+2) `cd ~/src_installs/qt_apps/AntScope2_LMDE`
+3) Compile should have created `build/release` under project root. If not, then something went wrong or I missed a step at Compile/Build Steps. I think, technically, all that's needed for next part is the green, executable, AntScope2 file (wherever that ended up), and then one can use that directory instead.
+4) `mkdir build/release/Resources`
+5) `cp post_build_files/cables.txt build/release/Resources/`
+6) `cp post_build_files/itu-regions.txt build/release/` (unsure if needed, but I noted back at LMDE5)
+7) `cp post_build_files/itu-regions.txt ~/RigExpert/AntScope2/` (from compiled terminal output when missing)
+8) `cp itu-regions-defaults.txt build/release/Resources/` (from compiled terminal output when missing)
+9) `cp post_build_files/*.qm build/release/`
+10) `sudo adduser $USER dialout` (for user access to the hardware when the RigExpert Stick Pro is plugged in)
+11) `sudo cp post_build_files/rigexpert-usb.rules /etc/udev/rules.d/`
+12) Plug in the Stick Pro w/it's USB cable
+13) Run AntScope2 (`~/src_installs/qt_apps/AntScope2_LMDE/build/release/AntScope2`)
+14) Click 'Settings' -> 'Connect analyser'
+15) Check 'Bands highlighting' dropdown has options. Select your ITU Region.
+16) Click 'Cable' tab
+17) Check 'Change parameters or choose from list...' dropdown has list of common cables.
+18) Click 'Close'
+19) If all went well:
+    - 'Single' and 'Continuous' under 'Run' should enable.
+    - Click 'Single' as a smoke test.
+    - If not, then troubleshooting hardware detection is past the scope of this document.
+   
+### Add AntScope2 to LMDE's Cinnamon Menu
 - TODO
