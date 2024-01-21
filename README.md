@@ -30,6 +30,7 @@ On a related note, '1932af[...]' does use QT5. The newer BLE commit appears to r
 
 ### Linux LMDE5/6 Dependencies/Packages
 I gave tracking this a go again on LMDE6, but due to the confusion of what was going on with the BLE commit, I ended up just installing everything. Technically, QT6 is also installed on my box, but that shouldn't be necessary. If you discover it is a problem for some reason, then same method will install QT6. Breaking up `sudo` commands so easier to check install list before installing.
+- `sudo apt install git` <-- so we can grab this repo.
 - `sudo apt install build-essential` <-- usual for about any source compiles.
 - `sudo apt install libusb-1.0-0-dev` <-- unsure if this was still needed, but wouldn't doubt it.
 - `sudo apt install qt5*`
@@ -46,6 +47,13 @@ For source installs/compiles where I'm not using a package manager I like 1 fold
 - `~/src_installs/qt_apps`
   - Qt builds using qtcreator had default directory creation outside of the project root. I'm sure there's good reason for it (I have very little knowlege of Qt), but it spams up my `src_installs` directory, requiring cleanup when I'm done that I'd rather not have to do.
 - `~/src_installs/qt_apps/AntScope2_LMDE` <-- Do not create. It will be created on `git clone` step.
+
+### Make Directory Structure and Clone this Repo
+1) If not created already: `mkdir ~/src_installs`
+2) If not created already: `mkdir ~/src_installs/qt_apps`
+3) `cd ~/src_installs/qt_apps`
+4) `git clone https://github.com/bmchandler/AntScope2_LMDE.git`
+    - This creates the `AntScope2_LMDE` directory under `~/src_installs/qt_apps` used in below steps.
 
 
 ### Compile/Build Steps (as of 240120)
