@@ -13,6 +13,18 @@ That said, I'm freezing the AntScope2 part of the code at commit '19323af[...]'.
 
 On a related note, '1932af[...]' does use QT5. The newer BLE commit appears to require QT6 (i.e. 'QBluetoothDeviceDiscoveryAgent' wasn't introduced until Qt 6.2 per Qt's docs. An error with that appeared when I 1st tried to compile with QT5. The errors went away on compile attempts with QT6, but the error "Add code for our OS" remains, preventing compile from completing).
 
+### Known Issues
+- The 'Frequency=', 'SWR=', etc. overlay box sometimes gets stuck and can't be moved after scan.
+    - Workaround: try and move it to where you want it first.
+- 'Settings' -> 'General' -> 'Serial port:' dropdown is empty
+    - 'Connect analyser' is used anyway, so this hasn't affected functionality for me).
+- 'Settings' -> 'General' -> 'Bands highlighting' dropdown is empty empty
+    - The `itu-regions.txt` file is likely not being found.
+    - Try running program from terminal and see what 'No such file or directory' paths appear in output.
+    - Put those files in those locations.
+- 'Settings' -> 'Cable' -> 'Change parameters or choose from list...' dropdown is empty
+    - `cables.txt` file is likely not being found like above.
+
 ### Linux LMDE5/6 Dependencies/Packages
 I have tracking this a go again on LMDE6, but due to the confusion of what was going on with the BLE commit, I ended up just installing everything. Technically, QT6 is also installed on my box, but that shouldn't be necessary. If you discover so, then same method will install QT6. Breaking up so easier to check install list before 'Y'.
 - `sudo apt install build-essential` <-- usual for about any source compiles.
