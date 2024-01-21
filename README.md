@@ -2,7 +2,7 @@
 
 ### Thanks
 - [RigExpert](https://rigexpert.com/) and [Andrei Fredd Mironov](https://github.com/andreifreddmironov)
-  - For maintaining the official open-source version on GitHub under MIT license.
+  - ... for maintaining the official open-source version on GitHub under MIT license.
 - D.R. Evans (N7DR) 
   - ... whose blog [Running RigExpert AntScope2 on Debian Stable (buster)](http://drevans.blog.enginehousebooks.com/2020/09/running-rigexpert-antscope2-on-debian.html?m=1) got me through the first time I tried this on LMDE5, without which, I probably would have been dead in the water.
 
