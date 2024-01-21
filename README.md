@@ -91,4 +91,16 @@ For source installs/compiles where I'm not using a package manager I like 1 fold
     - If not, then troubleshooting hardware detection is past the scope of this document.
    
 ### Add AntScope2 to LMDE's Cinnamon Menu
-- TODO
+1) Right-click Cinnamon's Menu/Start button
+2) Click 'Edit menu'
+3) Select folder you want it under
+    - I use 'Hamradio' folder. It's added if you install any of the `hamradio-*` packages from Debian.
+4) Click 'New Item'
+5) Set:
+    - 'Name' = "AntScope2"
+    - 'Command' = "/home/{your user dir}/src_installs/qt_apps/AntScope2_LMDE/build/release/AntScope2"
+    - 'Comment' = "AntScope2 LMDE build."
+    - Icon (via icon button) = `AntScope2.png` (nav to the `~/src_installs/qt_apps/AntScope2` folder)
+6) Click 'OK'
+7) Click 'Close'
+8) Check Menu Button -> 'Hamradio' -> 'AntScope2' appears and executes on click.
