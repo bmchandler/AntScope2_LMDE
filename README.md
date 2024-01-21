@@ -12,7 +12,7 @@ I forked this back during LMDE5. It is in no way official nor am I associated wi
 
 That said, I'm freezing the AntScope2 part of the code at commit '19323af[...]'. If I have time/need then I may try some future commit past the BLE one, but for now my goal is to make reinstalls a bit easier for myself on LMDE6 frozen at '1932af[...]'. You're welcome to give this a shot as well (and hope it helps) but don't bother with issues/pull requests (I don't have the bandwidth or care for all that too). 
 
-On a related note, '1932af[...]' does use QT5. The newer BLE commit appears to require QT6 (i.e. 'QBluetoothDeviceDiscoveryAgent' wasn't introduced until Qt 6.2 per Qt's docs. An error with that appeared when I 1st tried to compile with QT5. The errors went away on compile attempts with QT6, but the error "Add code for our OS" remains, preventing compile from completing).
+On a related note, '1932af[...]' does use QT5. The newer BLE commit appears to require QT6 (i.e. 'QBluetoothDeviceDiscoveryAgent' wasn't introduced until Qt 6.2 per Qt's docs. An error with that appeared when I 1st tried to compile with QT5. The errors went away on compile attempts with QT6, but the error "Add code for our OS" remained, preventing compile from completing).
 
 
 ### Known Issues
