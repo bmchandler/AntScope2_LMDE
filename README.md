@@ -23,3 +23,13 @@ I have tracking this a go again on LMDE6, but due to the confusion of what was g
 - `sudo apt install qtcreator`
   - This may get pulled in by here. I could not get compile working using CLI so use the IDE. 
 
+### Directory Structure Notes
+For source installs/compiles where I'm not using a package manager I like 1 folder that holds everything in my home folder so I know if an app is `make install`ed that I don't accidently blow the folder away later making updates/uninstalls a little less error prone for me. Below is the structure I use for this. If newer to Linux `~` and `$HOME` is synonymous with the user's home directory.
+- `~/src_installs`
+  - This is where I plonk all my non-package manager installs/compiles.
+- `~/src_installs/qt_apps`
+  - Qt builds using qtcreator had default directory creation outside of the project root. I'm sure there's good reason for it (I have very little knowlege of Qt), but it spams up my `src_installs` directory, requiring cleanup when I'm done that I'd rather not have to do.
+- `~/src_installs/qt_apps/AntScope2_LMDE` <-- Do not create. It will be created on `git clone` step.
+
+### Compile Steps (as of 240120)
+1) TODO
